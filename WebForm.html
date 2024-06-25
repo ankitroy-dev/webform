@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indev Web Form</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">Indev Webform</h1>
+            </div>
+        </header>
+        <h3 class="login" style="position: absolute; top: 0px; right: 20px; color: white;">Registered User?</h3>
+        <button class="login" style="position: absolute; top: 45px; right: 60px; background-color: blue; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px;" onclick="login()">Login</button>
+        <div class="form-container">
+            <h2>Personal Information</h2>
+            <form action="save_form1.php" method="post">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="language">Mother Tongue:</label>
+                    <input type="text" id="language" name="language" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="gender-options">
+                        <label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                        <label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
+                        <label for="other"><input type="radio" id="other" name="gender" value="other" required> Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="form-group">
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function login() 
+        {
+            window.location.href = 'login.html';
+        }
+        //for name
+        document.getElementById('fullName').addEventListener('input', function(event) {
+        this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+        //for email
+        document.getElementById('email').addEventListener('input', function(event) {
+        this.value = this.value.replace(/[^a-zA-Z0-9@._-]/g, '');
+        });
+        document.getElementById('language').addEventListener('input', function(event) {
+        this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to get query parameter by name
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Get the source query parameter
+            const source = getQueryParam('source');
+            console.log('Source:', source); // Log for debugging
+
+            // Select all elements with the class 'login'
+            const loginElements = document.querySelectorAll('.login');
+
+            if (source === 'logout') {
+                // Show login elements if source is 'logout'
+                loginElements.forEach(function(loginElement) {
+                    loginElement.style.display = 'block';
+                });
+            } else if (source === 'addEntry') {
+                // Hide login elements if source is 'addEntry'
+                loginElements.forEach(function(loginElement) {
+                    loginElement.style.display = 'none';
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>

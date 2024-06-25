@@ -1,0 +1,98 @@
+/* Global styles */
+body, h2, form, div, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Flex container for page layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Header styling */
+.header {
+    width: 100%; /* Full width */
+    background-color: #007bff; /* Blue background color */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+#f1{
+    position: absolute; 
+    top: 45px; 
+    right: 80px; 
+    background-color: blue; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px;
+  }
+/* Form container */
+.login-container {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px black;
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}

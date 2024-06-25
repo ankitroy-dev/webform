@@ -1,0 +1,123 @@
+/* Global Styling */
+body, h2, form, div, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Flex container for page layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Header styling */
+.header {
+    width: 100%; /* Full width */
+    background-color: #007bff; /* Blue background color */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Form Container */
+.form-container {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px black;
+    text-align: center; /* Center align the form */
+    margin-top: 50px; /* Add some spacing below the header */
+}
+
+/* Form Title */
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align form elements to the left */
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+    border-color: blue;
+    outline: none;
+}
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Gender Buttons */
+.gender-options label {
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.gender-options label:last-child {
+    margin-right: 0;
+}
+
+/* Buttons */
+.form-group button[type="submit"],
+.form-group button[type="reset"],
+.form-group button[type="button"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-group button[type="submit"]:hover,
+.form-group button[type="reset"]:hover,
+.form-group button[type="button"]:hover {
+    background-color: green;
+}
